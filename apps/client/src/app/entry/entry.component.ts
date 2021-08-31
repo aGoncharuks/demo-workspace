@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class EntryComponent {
 	value: string = '';
-	// apiResponse$: Observable<DemoType[]> = this.http.get<DemoType[]>('http://localhost:3000/data');
+	apiResponse$: Observable<any[]> = this.http.get<any[]>('http://localhost:3333/api/data');
 
 	constructor(private http: HttpClient) {
 	}
