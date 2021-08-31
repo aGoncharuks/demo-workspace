@@ -1,5 +1,5 @@
 {
-  "npmScope": "angular-nest-starter",
+  "npmScope": "demo-workspace",
   "affected": {
     "defaultBase": "master"
   },

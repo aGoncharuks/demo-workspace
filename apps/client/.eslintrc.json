@@ -21,7 +21,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "angular-nest-starter",
+            "prefix": "demo-workspace",
             "style": "kebab-case"
           }
         ]

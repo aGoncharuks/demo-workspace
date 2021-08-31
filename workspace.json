@@ -5,7 +5,7 @@
       "projectType": "application",
       "root": "apps/client",
       "sourceRoot": "apps/client/src",
-      "prefix": "angular-nest-starter",
+      "prefix": "demo-workspace",
       "targets": {
         "build": {
           "executor": "@nrwl/angular:webpack-browser",
