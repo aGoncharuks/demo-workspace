@@ -1,4 +1,4 @@
-import { DemoType } from '@demo-workspace/shared';
+import { DemoType } from '@demo-workspace/demo/shared';
 import { Injectable } from '@nestjs/common';
 
 @Injectable()
