@@ -27,6 +27,9 @@
     ]
   },
   "projects": {
+    "core-client-message-bus": {
+      "tags": []
+    },
     "demo-api": {
       "tags": []
     },

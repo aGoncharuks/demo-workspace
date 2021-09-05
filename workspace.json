@@ -1,6 +1,27 @@
 {
   "version": 2,
   "projects": {
+    "core-client-message-bus": {
+      "root": "libs/core/client-message-bus",
+      "sourceRoot": "libs/core/client-message-bus/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/core/client-message-bus/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/core/client-message-bus"],
+          "options": {
+            "jestConfig": "libs/core/client-message-bus/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "demo-api": {
       "root": "apps/demo/demo-api",
       "sourceRoot": "apps/demo/demo-api/src",
@@ -67,7 +88,10 @@
             "polyfills": "apps/demo/demo-client/src/polyfills.ts",
             "tsConfig": "apps/demo/demo-client/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["apps/demo/demo-client/src/favicon.ico", "apps/demo/demo-client/src/assets"],
+            "assets": [
+              "apps/demo/demo-client/src/favicon.ico",
+              "apps/demo/demo-client/src/assets"
+            ],
             "styles": ["apps/demo/demo-client/src/styles.scss"],
             "scripts": [],
             "customWebpackConfig": {
