@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-// import { DemoType } from '@shared/types';
+import { DemoType } from '@demo-workspace/shared';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class EntryComponent {
 	value: string = '';
-	apiResponse$: Observable<any[]> = this.http.get<any[]>('http://localhost:3333/api/data');
+	apiResponse$: Observable<DemoType[]> = this.http.get<DemoType[]>('http://localhost:3333/api/data');
 
 	constructor(private http: HttpClient) {
 	}

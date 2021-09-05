@@ -1,9 +1,9 @@
+import { DemoType } from '@demo-workspace/shared';
 import { Injectable } from '@nestjs/common';
-// import { DemoType } from '@shared/types';
 
 @Injectable()
 export class AppService {
-  getDemoData(): any[] {
+  getDemoData(): DemoType[] {
     return [
 	    {
 	    	id: 1,
