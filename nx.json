@@ -27,17 +27,17 @@
     ]
   },
   "projects": {
-    "api": {
+    "demo-api": {
       "tags": []
     },
-    "client": {
+    "demo-client": {
       "tags": []
     },
-    "client-e2e": {
+    "demo-client-e2e": {
       "tags": [],
-      "implicitDependencies": ["client"]
+      "implicitDependencies": ["demo-client"]
     },
-    "shared": {
+    "demo-shared": {
       "tags": []
     }
   }

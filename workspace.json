@@ -1,19 +1,19 @@
 {
   "version": 2,
   "projects": {
-    "api": {
-      "root": "apps/api",
-      "sourceRoot": "apps/api/src",
+    "demo-api": {
+      "root": "apps/demo/demo-api",
+      "sourceRoot": "apps/demo/demo-api/src",
       "projectType": "application",
       "targets": {
         "build": {
           "executor": "@nrwl/node:build",
           "outputs": ["{options.outputPath}"],
           "options": {
-            "outputPath": "dist/apps/api",
-            "main": "apps/api/src/main.ts",
-            "tsConfig": "apps/api/tsconfig.app.json",
-            "assets": ["apps/api/src/assets"]
+            "outputPath": "dist/apps/demo/demo-api",
+            "main": "apps/demo/demo-api/src/main.ts",
+            "tsConfig": "apps/demo/demo-api/tsconfig.app.json",
+            "assets": ["apps/demo/demo-api/src/assets"]
           },
           "configurations": {
             "production": {
@@ -22,8 +22,8 @@
               "inspect": false,
               "fileReplacements": [
                 {
-                  "replace": "apps/api/src/environments/environment.ts",
-                  "with": "apps/api/src/environments/environment.prod.ts"
+                  "replace": "apps/demo/demo-api/src/environments/environment.ts",
+                  "with": "apps/demo/demo-api/src/environments/environment.prod.ts"
                 }
               ]
             }
@@ -32,46 +32,46 @@
         "serve": {
           "executor": "@nrwl/node:execute",
           "options": {
-            "buildTarget": "api:build"
+            "buildTarget": "demo-api:build"
           }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/api/**/*.ts"]
+            "lintFilePatterns": ["apps/demo/demo-api/**/*.ts"]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/api"],
+          "outputs": ["coverage/apps/demo/demo-api"],
           "options": {
-            "jestConfig": "apps/api/jest.config.js",
+            "jestConfig": "apps/demo/demo-api/jest.config.js",
             "passWithNoTests": true
           }
         }
       }
     },
-    "client": {
+    "demo-client": {
       "projectType": "application",
-      "root": "apps/client",
-      "sourceRoot": "apps/client/src",
+      "root": "apps/demo/demo-client",
+      "sourceRoot": "apps/demo/demo-client/src",
       "prefix": "demo-workspace",
       "targets": {
         "build": {
           "executor": "@nrwl/angular:webpack-browser",
           "outputs": ["{options.outputPath}"],
           "options": {
-            "outputPath": "dist/apps/client",
-            "index": "apps/client/src/index.html",
-            "main": "apps/client/src/main.ts",
-            "polyfills": "apps/client/src/polyfills.ts",
-            "tsConfig": "apps/client/tsconfig.app.json",
+            "outputPath": "dist/apps/demo/demo-client",
+            "index": "apps/demo/demo-client/src/index.html",
+            "main": "apps/demo/demo-client/src/main.ts",
+            "polyfills": "apps/demo/demo-client/src/polyfills.ts",
+            "tsConfig": "apps/demo/demo-client/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["apps/client/src/favicon.ico", "apps/client/src/assets"],
-            "styles": ["apps/client/src/styles.scss"],
+            "assets": ["apps/demo/demo-client/src/favicon.ico", "apps/demo/demo-client/src/assets"],
+            "styles": ["apps/demo/demo-client/src/styles.scss"],
             "scripts": [],
             "customWebpackConfig": {
-              "path": "apps/client/webpack.config.js"
+              "path": "apps/demo/demo-client/webpack.config.js"
             }
           },
           "configurations": {
@@ -90,13 +90,13 @@
               ],
               "fileReplacements": [
                 {
-                  "replace": "apps/client/src/environments/environment.ts",
-                  "with": "apps/client/src/environments/environment.prod.ts"
+                  "replace": "apps/demo/demo-client/src/environments/environment.ts",
+                  "with": "apps/demo/demo-client/src/environments/environment.prod.ts"
                 }
               ],
               "outputHashing": "all",
               "customWebpackConfig": {
-                "path": "apps/client/webpack.prod.config.js"
+                "path": "apps/demo/demo-client/webpack.prod.config.js"
               }
             },
             "development": {
@@ -114,70 +114,70 @@
           "executor": "@nrwl/angular:webpack-server",
           "configurations": {
             "production": {
-              "browserTarget": "client:build:production"
+              "browserTarget": "demo-client:build:production"
             },
             "development": {
-              "browserTarget": "client:build:development"
+              "browserTarget": "demo-client:build:development"
             }
           },
           "defaultConfiguration": "development",
           "options": {
             "port": 5100,
-            "proxyConfig": "apps/client/proxy.conf.json"
+            "proxyConfig": "apps/demo/demo-client/proxy.conf.json"
           }
         },
         "extract-i18n": {
           "executor": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "client:build"
+            "browserTarget": "demo-client:build"
           }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "apps/client/src/**/*.ts",
-              "apps/client/src/**/*.html"
+              "apps/demo/demo-client/src/**/*.ts",
+              "apps/demo/demo-client/src/**/*.html"
             ]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/client"],
+          "outputs": ["coverage/apps/demo/demo-client"],
           "options": {
-            "jestConfig": "apps/client/jest.config.js",
+            "jestConfig": "apps/demo/demo-client/jest.config.js",
             "passWithNoTests": true
           }
         }
       }
     },
-    "client-e2e": {
-      "root": "apps/client-e2e",
-      "sourceRoot": "apps/client-e2e/src",
+    "demo-client-e2e": {
+      "root": "apps/demo/demo-client-e2e",
+      "sourceRoot": "apps/demo/demo-client-e2e/src",
       "projectType": "application",
       "targets": {
         "e2e": {
           "executor": "@nrwl/cypress:cypress",
           "options": {
-            "cypressConfig": "apps/client-e2e/cypress.json",
-            "devServerTarget": "client:serve:development",
-            "tsConfig": "apps/client-e2e/tsconfig.json"
+            "cypressConfig": "apps/demo/demo-client-e2e/cypress.json",
+            "devServerTarget": "demo-client:serve:development",
+            "tsConfig": "apps/demo/demo-client-e2e/tsconfig.json"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "client:serve:production"
+              "devServerTarget": "demo-client:serve:production"
             }
           }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/client-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": ["apps/demo/demo-client-e2e/**/*.{js,ts}"]
           }
         }
       }
     },
-    "shared": {
+    "demo-shared": {
       "root": "libs/demo/shared",
       "sourceRoot": "libs/demo/shared/src",
       "projectType": "library",
@@ -218,5 +218,5 @@
       "style": "scss"
     }
   },
-  "defaultProject": "client"
+  "defaultProject": "demo-client"
 }
