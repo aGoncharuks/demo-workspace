@@ -37,6 +37,9 @@
       "tags": [],
       "implicitDependencies": ["app-one-app-one-client"]
     },
+    "app-one-shared": {
+      "tags": []
+    },
     "app-two-client": {
       "tags": []
     },
@@ -45,9 +48,6 @@
       "implicitDependencies": ["app-two-client"]
     },
     "core-client-message-bus": {
-      "tags": []
-    },
-    "demo-shared": {
       "tags": []
     }
   }

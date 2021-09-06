@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { DemoType } from '@demo-workspace/demo/shared';
+import { DemoType } from '@demo-workspace/app-one-shared';
 import { Observable } from 'rxjs';
 
 @Component({

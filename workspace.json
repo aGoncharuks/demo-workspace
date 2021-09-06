@@ -180,6 +180,27 @@
         }
       }
     },
+    "app-one-shared": {
+      "root": "libs/app-one/shared",
+      "sourceRoot": "libs/app-one/shared/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/app-one/shared/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/app-one/shared"],
+          "options": {
+            "jestConfig": "libs/app-one/shared/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "app-two-client": {
       "root": "apps/app-two/app-two-client",
       "sourceRoot": "apps/app-two/app-two-client/src",
@@ -300,27 +321,6 @@
           "outputs": ["coverage/libs/core/client-message-bus"],
           "options": {
             "jestConfig": "libs/core/client-message-bus/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "demo-shared": {
-      "root": "libs/demo/shared",
-      "sourceRoot": "libs/demo/shared/src",
-      "projectType": "library",
-      "targets": {
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/demo/shared/**/*.ts"]
-          }
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/demo/shared"],
-          "options": {
-            "jestConfig": "libs/demo/shared/jest.config.js",
             "passWithNoTests": true
           }
         }

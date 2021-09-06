@@ -15,10 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@demo-workspace/app-one-shared": ["libs/app-one/shared/src/index.ts"],
       "@demo-workspace/core/client-message-bus": [
         "libs/core/client-message-bus/src/index.ts"
-      ],
-      "@demo-workspace/demo/shared": ["libs/demo/shared/src/index.ts"]
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

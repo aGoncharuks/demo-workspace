@@ -1,4 +1,4 @@
-import { DemoType } from '@demo-workspace/demo/shared';
+import { DemoType } from '@demo-workspace/app-one-shared';
 import { Controller, Get } from '@nestjs/common';
 import { AppService } from './app.service';
 
