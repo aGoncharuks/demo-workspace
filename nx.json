@@ -27,15 +27,15 @@
     ]
   },
   "projects": {
-    "app-one-app-one-api": {
+    "app-one-api": {
       "tags": []
     },
-    "app-one-app-one-client": {
+    "app-one-client": {
       "tags": []
     },
-    "app-one-app-one-client-e2e": {
+    "app-one-client-e2e": {
       "tags": [],
-      "implicitDependencies": ["app-one-app-one-client"]
+      "implicitDependencies": ["app-one-client"]
     },
     "app-one-shared": {
       "tags": []

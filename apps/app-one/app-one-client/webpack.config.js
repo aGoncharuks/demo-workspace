@@ -13,7 +13,7 @@ module.exports = {
       name: 'appOne',
       filename: 'remoteEntry.js',
       exposes: {
-        './entryModule': 'apps/demo/demo-client/src/app/entry/entry.module.ts',
+        './entryModule': 'apps/app-one/app-one-client/src/app/entry/entry.module.ts',
       },
       shared: {
         '@angular/core': {

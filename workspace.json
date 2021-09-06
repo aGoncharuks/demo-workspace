@@ -1,7 +1,7 @@
 {
   "version": 2,
   "projects": {
-    "app-one-app-one-api": {
+    "app-one-api": {
       "root": "apps/app-one/app-one-api",
       "sourceRoot": "apps/app-one/app-one-api/src",
       "projectType": "application",
@@ -32,7 +32,7 @@
         "serve": {
           "executor": "@nrwl/node:execute",
           "options": {
-            "buildTarget": "app-one-app-one-api:build"
+            "buildTarget": "app-one-api:build"
           }
         },
         "lint": {
@@ -51,7 +51,7 @@
         }
       }
     },
-    "app-one-app-one-client": {
+    "app-one-client": {
       "projectType": "application",
       "root": "apps/app-one/app-one-client",
       "sourceRoot": "apps/app-one/app-one-client/src",
@@ -117,10 +117,10 @@
           "executor": "@nrwl/angular:webpack-server",
           "configurations": {
             "production": {
-              "browserTarget": "app-one-app-one-client:build:production"
+              "browserTarget": "app-one-client:build:production"
             },
             "development": {
-              "browserTarget": "app-one-app-one-client:build:development"
+              "browserTarget": "app-one-client:build:development"
             }
           },
           "defaultConfiguration": "development",
@@ -132,7 +132,7 @@
         "extract-i18n": {
           "executor": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "app-one-app-one-client:build"
+            "browserTarget": "app-one-client:build"
           }
         },
         "lint": {
@@ -154,7 +154,7 @@
         }
       }
     },
-    "app-one-app-one-client-e2e": {
+    "app-one-client-e2e": {
       "root": "apps/app-one/app-one-client-e2e",
       "sourceRoot": "apps/app-one/app-one-client-e2e/src",
       "projectType": "application",
@@ -163,12 +163,12 @@
           "executor": "@nrwl/cypress:cypress",
           "options": {
             "cypressConfig": "apps/app-one/app-one-client-e2e/cypress.json",
-            "devServerTarget": "app-one-app-one-client:serve:development",
+            "devServerTarget": "app-one-client:serve:development",
             "tsConfig": "apps/app-one/app-one-client-e2e/tsconfig.json"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "app-one-app-one-client:serve:production"
+              "devServerTarget": "app-one-client:serve:production"
             }
           }
         },
@@ -360,5 +360,5 @@
       }
     }
   },
-  "defaultProject": "app-one-app-one-client"
+  "defaultProject": "app-one-client"
 }
