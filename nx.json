@@ -27,6 +27,13 @@
     ]
   },
   "projects": {
+    "app-two-client": {
+      "tags": []
+    },
+    "app-two-client-e2e": {
+      "tags": [],
+      "implicitDependencies": ["app-two-client"]
+    },
     "core-client-message-bus": {
       "tags": []
     },

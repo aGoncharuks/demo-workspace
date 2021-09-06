@@ -1,6 +1,110 @@
 {
   "version": 2,
   "projects": {
+    "app-two-client": {
+      "root": "apps/app-two/app-two-client",
+      "sourceRoot": "apps/app-two/app-two-client/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/web:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/app-two/app-two-client",
+            "index": "apps/app-two/app-two-client/src/index.html",
+            "main": "apps/app-two/app-two-client/src/main.tsx",
+            "polyfills": "apps/app-two/app-two-client/src/polyfills.ts",
+            "tsConfig": "apps/app-two/app-two-client/tsconfig.app.json",
+            "assets": [
+              "apps/app-two/app-two-client/src/favicon.ico",
+              "apps/app-two/app-two-client/src/assets"
+            ],
+            "styles": ["apps/app-two/app-two-client/src/styles.scss"],
+            "scripts": [],
+            "webpackConfig": "@nrwl/react/plugins/webpack"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/app-two/app-two-client/src/environments/environment.ts",
+                  "with": "apps/app-two/app-two-client/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/web:dev-server",
+          "options": {
+            "buildTarget": "app-two-client:build",
+            "hmr": true,
+            "port": 5200
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "app-two-client:build:production",
+              "hmr": false
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/app-two/app-two-client/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/app-two/app-two-client"],
+          "options": {
+            "jestConfig": "apps/app-two/app-two-client/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "app-two-client-e2e": {
+      "root": "apps/app-two/app-two-client-e2e",
+      "sourceRoot": "apps/app-two/app-two-client-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/app-two/app-two-client-e2e/cypress.json",
+            "devServerTarget": "app-two-client:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "app-two-client:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/app-two/app-two-client-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
     "core-client-message-bus": {
       "root": "libs/core/client-message-bus",
       "sourceRoot": "libs/core/client-message-bus/src",
@@ -240,6 +344,20 @@
     },
     "@nrwl/angular:component": {
       "style": "scss"
+    },
+    "@nrwl/react": {
+      "application": {
+        "style": "scss",
+        "linter": "eslint",
+        "babel": true
+      },
+      "component": {
+        "style": "scss"
+      },
+      "library": {
+        "style": "scss",
+        "linter": "eslint"
+      }
     }
   },
   "defaultProject": "demo-client"
