@@ -27,6 +27,16 @@
     ]
   },
   "projects": {
+    "app-one-app-one-api": {
+      "tags": []
+    },
+    "app-one-app-one-client": {
+      "tags": []
+    },
+    "app-one-app-one-client-e2e": {
+      "tags": [],
+      "implicitDependencies": ["app-one-app-one-client"]
+    },
     "app-two-client": {
       "tags": []
     },
@@ -36,16 +46,6 @@
     },
     "core-client-message-bus": {
       "tags": []
-    },
-    "demo-api": {
-      "tags": []
-    },
-    "demo-client": {
-      "tags": []
-    },
-    "demo-client-e2e": {
-      "tags": [],
-      "implicitDependencies": ["demo-client"]
     },
     "demo-shared": {
       "tags": []

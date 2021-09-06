@@ -6,6 +6,6 @@ const routes: Routes = [{ path: '', component: EntryComponent }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class EntryRoutingModule { }
+export class EntryRoutingModule {}

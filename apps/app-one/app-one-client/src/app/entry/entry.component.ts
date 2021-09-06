@@ -5,12 +5,13 @@ import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-entry',
-  templateUrl: 'entry.component.html'
+  templateUrl: 'entry.component.html',
 })
 export class EntryComponent {
-	value: string = '';
-	apiResponse$: Observable<DemoType[]> = this.http.get<DemoType[]>('http://localhost:3333/api/data');
+  value: string = '';
+  apiResponse$: Observable<DemoType[]> = this.http.get<DemoType[]>(
+    'http://localhost:3333/api/data'
+  );
 
-	constructor(private http: HttpClient) {
-	}
+  constructor(private http: HttpClient) {}
 }

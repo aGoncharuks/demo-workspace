@@ -6,16 +6,8 @@ import { FormsModule } from '@angular/forms';
 import { EntryRoutingModule } from './entry-routing.module';
 import { EntryComponent } from './entry.component';
 
-
 @NgModule({
-  declarations: [
-    EntryComponent
-  ],
-  imports: [
-    CommonModule,
-    EntryRoutingModule,
-	  FormsModule,
-	  HttpClientModule
-  ]
+  declarations: [EntryComponent],
+  imports: [CommonModule, EntryRoutingModule, FormsModule, HttpClientModule],
 })
-export class EntryModule { }
+export class EntryModule {}
