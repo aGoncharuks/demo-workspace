@@ -16,16 +16,8 @@ module.exports = (config) => {
           },
   				filename: "remoteEntry.js",
   				shared: {
-  					"react": {
-              singleton: true,
-              strictVersion: true,
-              requiredVersion: '17.0.2'
-            },
-  					"react-dom": {
-              singleton: true,
-              strictVersion: true,
-              requiredVersion: '17.0.2'
-            }
+  					"react": { singleton: true, strictVersion: true, requiredVersion: '17.0.2' },
+  					"react-dom": { singleton: true, strictVersion: true, requiredVersion: '17.0.2' }
   				},
         }
       )
