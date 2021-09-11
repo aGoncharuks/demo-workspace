@@ -221,7 +221,7 @@
             ],
             "styles": ["apps/app-two/app-two-client/src/styles.scss"],
             "scripts": [],
-            "webpackConfig": "@nrwl/react/plugins/webpack"
+            "webpackConfig": "apps/app-two/app-two-client/webpack.config.js"
           },
           "configurations": {
             "production": {
