@@ -347,6 +347,31 @@
         }
       }
     },
+    "core-features": {
+      "projectType": "library",
+      "root": "libs/core/features",
+      "sourceRoot": "libs/core/features/src",
+      "prefix": "demo-workspace",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/core/features"],
+          "options": {
+            "jestConfig": "libs/core/features/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/core/features/src/**/*.ts",
+              "libs/core/features/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "core-permissions": {
       "projectType": "library",
       "root": "libs/core/permissions",
