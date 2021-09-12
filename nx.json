@@ -49,6 +49,13 @@
     },
     "core-client-message-bus": {
       "tags": []
+    },
+    "shell-client": {
+      "tags": []
+    },
+    "shell-client-e2e": {
+      "tags": [],
+      "implicitDependencies": ["shell-client"]
     }
   }
 }
