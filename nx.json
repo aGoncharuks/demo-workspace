@@ -47,6 +47,9 @@
       "tags": [],
       "implicitDependencies": ["app-two-client"]
     },
+    "core-authentication": {
+      "tags": []
+    },
     "core-client-message-bus": {
       "tags": []
     },

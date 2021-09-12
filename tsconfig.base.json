@@ -16,6 +16,9 @@
     "baseUrl": ".",
     "paths": {
       "@demo-workspace/app-one-shared": ["libs/app-one/shared/src/index.ts"],
+      "@demo-workspace/core/authentication": [
+        "libs/core/authentication/src/index.ts"
+      ],
       "@demo-workspace/core/client-message-bus": [
         "libs/core/client-message-bus/src/index.ts"
       ]

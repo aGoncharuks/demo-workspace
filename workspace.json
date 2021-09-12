@@ -305,6 +305,27 @@
         }
       }
     },
+    "core-authentication": {
+      "root": "libs/core/authentication",
+      "sourceRoot": "libs/core/authentication/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/core/authentication/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/core/authentication"],
+          "options": {
+            "jestConfig": "libs/core/authentication/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "core-client-message-bus": {
       "root": "libs/core/client-message-bus",
       "sourceRoot": "libs/core/client-message-bus/src",
