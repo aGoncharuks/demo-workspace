@@ -21,7 +21,8 @@
       ],
       "@demo-workspace/core/client-message-bus": [
         "libs/core/client-message-bus/src/index.ts"
-      ]
+      ],
+      "@demo-workspace/core/permissions": ["libs/core/permissions/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

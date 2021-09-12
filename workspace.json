@@ -347,6 +347,31 @@
         }
       }
     },
+    "core-permissions": {
+      "projectType": "library",
+      "root": "libs/core/permissions",
+      "sourceRoot": "libs/core/permissions/src",
+      "prefix": "demo-workspace",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/core/permissions"],
+          "options": {
+            "jestConfig": "libs/core/permissions/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/core/permissions/src/**/*.ts",
+              "libs/core/permissions/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "shell-client": {
       "projectType": "application",
       "root": "apps/shell/shell-client",

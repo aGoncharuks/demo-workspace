@@ -53,6 +53,9 @@
     "core-client-message-bus": {
       "tags": []
     },
+    "core-permissions": {
+      "tags": []
+    },
     "shell-client": {
       "tags": []
     },
