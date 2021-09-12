@@ -6,6 +6,10 @@ module.exports = (config) => {
 
   return {
     ...config,
+    output: {
+      uniqueName: 'app_two',
+      publicPath: 'auto'
+    },
     plugins: [
       ...config.plugins,
       new ModuleFederationPlugin(
@@ -16,8 +20,8 @@ module.exports = (config) => {
           },
   				filename: "remoteEntry.js",
   				shared: {
-  					"react": { singleton: true, strictVersion: true, requiredVersion: '17.0.2' },
-  					"react-dom": { singleton: true, strictVersion: true, requiredVersion: '17.0.2' }
+  					"react": { singleton: true, strictVersion: true, requiredVersion: '>=17.0.0 <18.0.0' },
+  					"react-dom": { singleton: true, strictVersion: true, requiredVersion: '>=17.0.0 <18.0.0' }
   				},
         }
       )

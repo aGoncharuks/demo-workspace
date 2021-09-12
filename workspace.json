@@ -333,7 +333,7 @@
       "prefix": "demo-workspace",
       "targets": {
         "build": {
-          "executor": "@angular-devkit/build-angular:browser",
+          "executor": "@nrwl/angular:webpack-browser",
           "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/shell/shell-client",
@@ -347,7 +347,10 @@
               "apps/shell/shell-client/src/assets"
             ],
             "styles": ["apps/shell/shell-client/src/styles.scss"],
-            "scripts": []
+            "scripts": [],
+            "customWebpackConfig": {
+              "path": "apps/shell/shell-client/webpack.config.js"
+            }
           },
           "configurations": {
             "production": {
@@ -369,7 +372,10 @@
                   "with": "apps/shell/shell-client/src/environments/environment.prod.ts"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "customWebpackConfig": {
+                "path": "apps/shell/shell-client/webpack.prod.config.js"
+              }
             },
             "development": {
               "buildOptimizer": false,
@@ -383,13 +389,14 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "executor": "@angular-devkit/build-angular:dev-server",
+          "executor": "@nrwl/angular:webpack-server",
           "configurations": {
             "production": {
               "browserTarget": "shell-client:build:production"
             },
             "development": {
-              "browserTarget": "shell-client:build:development"
+              "browserTarget": "shell-client:build:development",
+              "port": 5000
             }
           },
           "defaultConfiguration": "development"

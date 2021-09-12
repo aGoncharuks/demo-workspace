@@ -1,13 +1,14 @@
-import { enableProdMode } from '@angular/core';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { loadRemoteEntry } from '@angular-architects/module-federation';
+import { APP_REGISTRY } from './remotes/app-registry';
 
-import { AppModule } from './app/app.module';
-import { environment } from './environments/environment';
-
-if (environment.production) {
-  enableProdMode();
-}
-
-platformBrowserDynamic()
-  .bootstrapModule(AppModule)
-  .catch((err) => console.error(err));
+Promise.all([
+  APP_REGISTRY.map(
+    ({ appName, remoteEntryHost }) => loadRemoteEntry(remoteEntryHost, appName)
+  )
+])
+  .catch(error => {
+    console.error('Could not load remote entries: ', error);
+    console.log('Make sure you are serving all of your remotes and host names match!')
+  })
+  .then(() => import('./bootstrap'))
+  .catch(err => console.error(err));
