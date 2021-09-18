@@ -201,6 +201,133 @@
         }
       }
     },
+    "app-three-client": {
+      "projectType": "application",
+      "root": "apps/app-three/client",
+      "sourceRoot": "apps/app-three/client/src",
+      "prefix": "demo-workspace",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/angular:webpack-browser",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/app-three/client",
+            "index": "apps/app-three/client/src/index.html",
+            "main": "apps/app-three/client/src/main.ts",
+            "polyfills": "apps/app-three/client/src/polyfills.ts",
+            "tsConfig": "apps/app-three/client/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "apps/app-three/client/src/favicon.ico",
+              "apps/app-three/client/src/assets"
+            ],
+            "styles": ["apps/app-three/client/src/styles.scss"],
+            "scripts": [],
+            "customWebpackConfig": {
+              "path": "apps/app-three/client/webpack.config.js"
+            }
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "apps/app-three/client/src/environments/environment.ts",
+                  "with": "apps/app-three/client/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all",
+              "customWebpackConfig": {
+                "path": "apps/app-three/client/webpack.prod.config.js"
+              }
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "executor": "@nrwl/angular:webpack-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "app-three-client:build:production"
+            },
+            "development": {
+              "browserTarget": "app-three-client:build:development"
+            }
+          },
+          "defaultConfiguration": "development",
+          "options": {
+            "port": 5300
+          }
+        },
+        "extract-i18n": {
+          "executor": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "app-three-client:build"
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/app-three/client/src/**/*.ts",
+              "apps/app-three/client/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/app-three/client"],
+          "options": {
+            "jestConfig": "apps/app-three/client/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "app-three-client-e2e": {
+      "root": "apps/app-three/client-e2e",
+      "sourceRoot": "apps/app-three/client-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/app-three/client-e2e/cypress.json",
+            "devServerTarget": "app-three-client:serve:development"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "app-three-client:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/app-three/client-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
     "app-two-client": {
       "root": "apps/app-two/app-two-client",
       "sourceRoot": "apps/app-two/app-two-client/src",

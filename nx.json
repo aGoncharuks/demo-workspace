@@ -40,6 +40,13 @@
     "app-one-shared": {
       "tags": []
     },
+    "app-three-client": {
+      "tags": []
+    },
+    "app-three-client-e2e": {
+      "tags": [],
+      "implicitDependencies": ["app-three-client"]
+    },
     "app-two-client": {
       "tags": []
     },
