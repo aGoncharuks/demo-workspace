@@ -35,7 +35,7 @@
     },
     "app-one-client-e2e": {
       "tags": [],
-      "implicitDependencies": ["app-one-client"]
+      "implicitDependencies": ["app-one-client", "app-one-api"]
     },
     "app-one-shared": {
       "tags": []

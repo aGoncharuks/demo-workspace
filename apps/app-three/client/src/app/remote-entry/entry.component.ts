@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { coreClientMessageBus } from '@demo-workspace/core/client/message-bus';
 
 @Component({
   selector: 'demo-workspace-app-three-client-entry',
@@ -15,4 +16,10 @@ import { Component } from '@angular/core';
     `,
   ],
 })
-export class RemoteEntryComponent {}
+export class RemoteEntryComponent implements OnInit {
+  constructor() {}
+
+  ngOnInit() {
+    coreClientMessageBus();
+  }
+}
