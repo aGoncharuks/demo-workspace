@@ -16,7 +16,7 @@ module.exports = (config) => {
         {
           name: 'app_two',
           exposes: {
-            './entryModule': 'apps/app-two/app-two-client/src/bootstrap.tsx',
+            './entryModule': 'apps/app-two/client/src/bootstrap.tsx',
           },
   				filename: "remoteEntry.js",
   				shared: {
