@@ -54,16 +54,10 @@
       "tags": [],
       "implicitDependencies": ["app-two-client"]
     },
-    "core-authentication": {
-      "tags": []
-    },
     "core-client-message-bus": {
       "tags": []
     },
-    "core-features": {
-      "tags": []
-    },
-    "core-permissions": {
+    "core-client-permissions": {
       "tags": []
     },
     "shell-client": {

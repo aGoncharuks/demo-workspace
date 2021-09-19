@@ -1,6 +1,6 @@
 module.exports = {
-  displayName: 'core-permissions',
-  preset: '../../../jest.preset.js',
+  displayName: 'core-client-permissions',
+  preset: '../../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
     'ts-jest': {
@@ -8,7 +8,7 @@ module.exports = {
       stringifyContentPathRegex: '\\.(html|svg)$',
     },
   },
-  coverageDirectory: '../../../coverage/libs/core/permissions',
+  coverageDirectory: '../../../../coverage/libs/core/client/permissions',
   transform: {
     '^.+\\.(ts|js|html)$': 'jest-preset-angular',
   },

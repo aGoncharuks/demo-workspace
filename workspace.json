@@ -392,9 +392,7 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/app-two/client/**/*.{ts,tsx,js,jsx}"
-            ]
+            "lintFilePatterns": ["apps/app-two/client/**/*.{ts,tsx,js,jsx}"]
           }
         },
         "test": {
@@ -432,59 +430,38 @@
         }
       }
     },
-    "core-authentication": {
-      "root": "libs/core/authentication",
-      "sourceRoot": "libs/core/authentication/src",
-      "projectType": "library",
-      "targets": {
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/core/authentication/**/*.ts"]
-          }
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/core/authentication"],
-          "options": {
-            "jestConfig": "libs/core/authentication/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
     "core-client-message-bus": {
-      "root": "libs/core/client-message-bus",
-      "sourceRoot": "libs/core/client-message-bus/src",
+      "root": "libs/core/client/message-bus",
+      "sourceRoot": "libs/core/client/message-bus/src",
       "projectType": "library",
       "targets": {
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/core/client-message-bus/**/*.ts"]
+            "lintFilePatterns": ["libs/core/client/message-bus/**/*.ts"]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/core/client-message-bus"],
+          "outputs": ["coverage/libs/core/client/message-bus"],
           "options": {
-            "jestConfig": "libs/core/client-message-bus/jest.config.js",
+            "jestConfig": "libs/core/client/message-bus/jest.config.js",
             "passWithNoTests": true
           }
         }
       }
     },
-    "core-features": {
+    "core-client-permissions": {
       "projectType": "library",
-      "root": "libs/core/features",
-      "sourceRoot": "libs/core/features/src",
+      "root": "libs/core/client/permissions",
+      "sourceRoot": "libs/core/client/permissions/src",
       "prefix": "demo-workspace",
       "targets": {
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/core/features"],
+          "outputs": ["coverage/libs/core/client/permissions"],
           "options": {
-            "jestConfig": "libs/core/features/jest.config.js",
+            "jestConfig": "libs/core/client/permissions/jest.config.js",
             "passWithNoTests": true
           }
         },
@@ -492,33 +469,8 @@
           "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/core/features/src/**/*.ts",
-              "libs/core/features/src/**/*.html"
-            ]
-          }
-        }
-      }
-    },
-    "core-permissions": {
-      "projectType": "library",
-      "root": "libs/core/permissions",
-      "sourceRoot": "libs/core/permissions/src",
-      "prefix": "demo-workspace",
-      "targets": {
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/core/permissions"],
-          "options": {
-            "jestConfig": "libs/core/permissions/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/core/permissions/src/**/*.ts",
-              "libs/core/permissions/src/**/*.html"
+              "libs/core/client/permissions/src/**/*.ts",
+              "libs/core/client/permissions/src/**/*.html"
             ]
           }
         }

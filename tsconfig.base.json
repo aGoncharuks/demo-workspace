@@ -16,14 +16,12 @@
     "baseUrl": ".",
     "paths": {
       "@demo-workspace/app-one-shared": ["libs/app-one/shared/src/index.ts"],
-      "@demo-workspace/core/authentication": [
-        "libs/core/authentication/src/index.ts"
+      "@demo-workspace/core/client/message-bus": [
+        "libs/core/client/message-bus/src/index.ts"
       ],
-      "@demo-workspace/core/client-message-bus": [
-        "libs/core/client-message-bus/src/index.ts"
-      ],
-      "@demo-workspace/core/features": ["libs/core/features/src/index.ts"],
-      "@demo-workspace/core/permissions": ["libs/core/permissions/src/index.ts"]
+      "@demo-workspace/core/client/permissions": [
+        "libs/core/client/permissions/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

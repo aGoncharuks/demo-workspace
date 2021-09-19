@@ -1,6 +1,6 @@
 module.exports = {
-  displayName: 'core-authentication',
-  preset: '../../../jest.preset.js',
+  displayName: 'core-client-message-bus',
+  preset: '../../../../jest.preset.js',
   globals: {
     'ts-jest': {
       tsconfig: '<rootDir>/tsconfig.spec.json',
@@ -10,5 +10,5 @@ module.exports = {
     '^.+\\.[tj]sx?$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../../coverage/libs/core/authentication',
+  coverageDirectory: '../../../../coverage/libs/core/client/message-bus',
 };
