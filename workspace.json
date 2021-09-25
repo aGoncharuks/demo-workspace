@@ -1,6 +1,108 @@
 {
   "version": 2,
   "projects": {
+    "admin-client": {
+      "root": "apps/admin/client",
+      "sourceRoot": "apps/admin/client/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/web:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/admin/client",
+            "index": "apps/admin/client/src/index.html",
+            "main": "apps/admin/client/src/main.tsx",
+            "polyfills": "apps/admin/client/src/polyfills.ts",
+            "tsConfig": "apps/admin/client/tsconfig.app.json",
+            "assets": [
+              "apps/admin/client/src/favicon.ico",
+              "apps/admin/client/src/assets"
+            ],
+            "styles": ["apps/admin/client/src/styles.scss"],
+            "scripts": [],
+            "webpackConfig": "@nrwl/react/plugins/webpack"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/admin/client/src/environments/environment.ts",
+                  "with": "apps/admin/client/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/web:dev-server",
+          "options": {
+            "buildTarget": "admin-client:build",
+            "hmr": true,
+            "port": 6000
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "admin-client:build:production",
+              "hmr": false
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/admin/client/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/admin/client"],
+          "options": {
+            "jestConfig": "apps/admin/client/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "admin-client-e2e": {
+      "root": "apps/admin/client-e2e",
+      "sourceRoot": "apps/admin/client-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/admin/client-e2e/cypress.json",
+            "devServerTarget": "admin-client:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "admin-client:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/admin/client-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
     "app-one-api": {
       "root": "apps/app-one/api",
       "sourceRoot": "apps/app-one/api/src",
