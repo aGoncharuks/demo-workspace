@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@demo-workspace/admin/company-management": [
+        "libs/admin/company-management/src/index.ts"
+      ],
       "@demo-workspace/app-one-shared": ["libs/app-one/shared/src/index.ts"],
       "@demo-workspace/core/client/message-bus": [
         "libs/core/client/message-bus/src/index.ts"

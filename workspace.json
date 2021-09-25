@@ -103,6 +103,29 @@
         }
       }
     },
+    "admin-company-management": {
+      "root": "libs/admin/company-management",
+      "sourceRoot": "libs/admin/company-management/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/admin/company-management/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/admin/company-management"],
+          "options": {
+            "jestConfig": "libs/admin/company-management/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "app-one-api": {
       "root": "apps/app-one/api",
       "sourceRoot": "apps/app-one/api/src",
