@@ -53,7 +53,7 @@
           "options": {
             "buildTarget": "admin-client:build",
             "hmr": true,
-            "port": 6000
+            "port": 7000
           },
           "configurations": {
             "production": {
