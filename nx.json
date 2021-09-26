@@ -28,7 +28,7 @@
   },
   "projects": {
     "admin-client": {
-      "tags": []
+      "tags": ["scope:admin"]
     },
     "admin-client-e2e": {
       "tags": [],
@@ -38,40 +38,40 @@
       "tags": ["scope:admin"]
     },
     "app-one-api": {
-      "tags": []
+      "tags": ["scope:customer"]
     },
     "app-one-client": {
-      "tags": []
+      "tags": ["scope:customer"]
     },
     "app-one-client-e2e": {
       "tags": [],
       "implicitDependencies": ["app-one-client", "app-one-api"]
     },
     "app-one-shared": {
-      "tags": []
+      "tags": ["scope:customer"]
     },
     "app-three-client": {
-      "tags": []
+      "tags": ["scope:customer"]
     },
     "app-three-client-e2e": {
       "tags": [],
       "implicitDependencies": ["app-three-client"]
     },
     "app-two-client": {
-      "tags": []
+      "tags": ["scope:customer"]
     },
     "app-two-client-e2e": {
       "tags": [],
       "implicitDependencies": ["app-two-client"]
     },
     "core-client-message-bus": {
-      "tags": []
+      "tags": ["scope:customer"]
     },
     "core-client-permissions": {
-      "tags": []
+      "tags": ["scope:customer"]
     },
     "shell-client": {
-      "tags": []
+      "tags": ["scope:customer"]
     },
     "shell-client-e2e": {
       "tags": [],
