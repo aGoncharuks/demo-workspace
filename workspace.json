@@ -555,6 +555,31 @@
         }
       }
     },
+    "core-auth": {
+      "projectType": "library",
+      "root": "libs/core/auth",
+      "sourceRoot": "libs/core/auth/src",
+      "prefix": "demo-workspace",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/core/auth"],
+          "options": {
+            "jestConfig": "libs/core/auth/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/core/auth/src/**/*.ts",
+              "libs/core/auth/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "core-client-message-bus": {
       "root": "libs/core/client/message-bus",
       "sourceRoot": "libs/core/client/message-bus/src",

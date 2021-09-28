@@ -64,6 +64,9 @@
       "tags": [],
       "implicitDependencies": ["app-two-client"]
     },
+    "core-auth": {
+      "tags": ["scope:client"]
+    },
     "core-client-message-bus": {
       "tags": ["scope:customer"]
     },

@@ -5,5 +5,8 @@ import { Component } from '@angular/core';
   templateUrl: 'app.component.html',
 })
 export class AppComponent {
-  title = 'Micro Frontend Demo';
+  title = 'App One Micro Frontend';
+
+  constructor() {
+  }
 }

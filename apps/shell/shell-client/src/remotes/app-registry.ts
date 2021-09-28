@@ -17,4 +17,12 @@ export const APP_REGISTRY: AppData[] = [
   //   exposedModulePath: './entryModule',
   //   isNative: false
   // },
+  {
+    appName: AppName.AppThree,
+    route: AppName.AppThree,
+    displayName: 'Micro Frontend Three',
+    remoteEntryHost: 'http://localhost:5300/remoteEntry.js',
+    exposedModulePath: './entryModule',
+    isNative: true
+  },
 ];

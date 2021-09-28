@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { DemoType } from '@demo-workspace/app-one-shared';
+import { CoreClientAuthService } from '@demo-workspace/core/auth';
 import { coreClientMessageBus } from '@demo-workspace/core/client/message-bus';
 import { coreClientPermissions } from '@demo-workspace/core/client/permissions';
 import { Observable } from 'rxjs';
@@ -15,7 +16,8 @@ export class EntryComponent implements OnInit {
     'http://localhost:3333/api/data'
   );
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient,
+              public authService: CoreClientAuthService) {}
 
   ngOnInit() {
     coreClientPermissions();

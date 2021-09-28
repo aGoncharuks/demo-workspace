@@ -1,6 +1,7 @@
 export enum AppName {
 	AppOne = 'app_one',
-	AppTwo = 'app_two'
+	AppTwo = 'app_two',
+	AppThree = 'app_three'
 }
 
 export interface AppData {

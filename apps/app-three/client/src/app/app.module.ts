@@ -1,4 +1,4 @@
-import { RemoteEntryModule } from './remote-entry/entry.module';
+import { EntryModule } from './remote-entry/entry.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
