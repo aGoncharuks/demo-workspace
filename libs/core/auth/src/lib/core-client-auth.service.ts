@@ -1,14 +1,11 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CoreClientAuthService {
+  authToken = (Math.random() * 10).toString();
 
   constructor() { }
 
-  get authToken$(): Observable<string> {
-    return of((Math.random() * 10).toString());
-  }
 }

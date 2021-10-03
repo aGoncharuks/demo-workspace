@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'demo-workspace-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  selector: 'app-root',
+  templateUrl: 'app.component.html',
 })
 export class AppComponent {
-  title = 'App Three Micro Frontend';
+  title = 'App One Micro Frontend';
 
   constructor() {
   }
