@@ -11,7 +11,7 @@ import { AppModule } from './app/app.module';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, {
     cors: {
-      origin: ['https://brainbase.local:4200', 'http://localhost:5100'],
+      origin: ['http://localhost:4200', 'http://localhost:5000'],
     },
   });
   const globalPrefix = 'api';

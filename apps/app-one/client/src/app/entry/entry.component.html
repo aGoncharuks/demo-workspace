@@ -1,9 +1,5 @@
-<div>App One Micro Frontend</div>
+<header>Auth token: {{authService.authToken}}</header>
 
-<div>Element binding:</div>
-<input [(ngModel)]="value" />
-{{ value }}<br />
-
-<div>API Response:</div>
-<div>{{ apiResponse$ | async | json }}</div>
-<div>Auth token: {{authService.authToken}}</div>
+<main class="page-container">
+  <div *ngFor="let item of (data$ | async)">{{item.name}}</div>
+</main>

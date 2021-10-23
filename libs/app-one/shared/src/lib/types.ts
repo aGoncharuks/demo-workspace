@@ -1,4 +1,4 @@
 export interface DemoType {
-  id: number;
+  id: string;
   name: string;
 }

@@ -9,10 +9,10 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'app-entry',
   templateUrl: 'entry.component.html',
+  styleUrls: ['entry.component.scss']
 })
 export class EntryComponent implements OnInit {
-  value: string = '';
-  apiResponse$: Observable<DemoType[]> = this.http.get<DemoType[]>(
+  data$: Observable<DemoType[]> = this.http.get<DemoType[]>(
     'http://localhost:3333/api/data'
   );
 

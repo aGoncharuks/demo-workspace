@@ -6,11 +6,11 @@ export class AppService {
   getDemoData(): DemoType[] {
     return [
       {
-        id: 1,
+        id: '1',
         name: 'Name 1',
       },
       {
-        id: 2,
+        id: '2',
         name: 'Name 2',
       },
     ];
