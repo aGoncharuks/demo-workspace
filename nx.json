@@ -27,6 +27,9 @@
     ]
   },
   "projects": {
+    "admin-change-audit": {
+      "tags": ["scope:admin", "scope:customer"]
+    },
     "admin-client": {
       "tags": ["scope:admin"]
     },

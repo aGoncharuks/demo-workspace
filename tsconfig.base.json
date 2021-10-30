@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@demo-workspace/admin/change-audit": [
+        "libs/admin/change-audit/src/index.ts"
+      ],
       "@demo-workspace/admin/company-management": [
         "libs/admin/company-management/src/index.ts"
       ],

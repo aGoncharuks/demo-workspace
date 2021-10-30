@@ -1,6 +1,31 @@
 {
   "version": 2,
   "projects": {
+    "admin-change-audit": {
+      "projectType": "library",
+      "root": "libs/admin/change-audit",
+      "sourceRoot": "libs/admin/change-audit/src",
+      "prefix": "demo-workspace",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/admin/change-audit"],
+          "options": {
+            "jestConfig": "libs/admin/change-audit/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/admin/change-audit/src/**/*.ts",
+              "libs/admin/change-audit/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "admin-client": {
       "root": "apps/admin/client",
       "sourceRoot": "apps/admin/client/src",
