@@ -5,7 +5,7 @@ import { NavigationMenuItem } from '../remotes/types';
 import { buildMenuFromAppRegistry } from '../remotes/utils/router.utils';
 
 @Component({
-  selector: 'demo-workspace-root',
+  selector: 'dw-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })

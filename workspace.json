@@ -5,7 +5,7 @@
       "projectType": "library",
       "root": "libs/admin/change-audit",
       "sourceRoot": "libs/admin/change-audit/src",
-      "prefix": "demo-workspace",
+      "prefix": "dw",
       "targets": {
         "test": {
           "executor": "@nrwl/jest:jest",
@@ -205,7 +205,7 @@
       "projectType": "application",
       "root": "apps/app-one/client",
       "sourceRoot": "apps/app-one/client/src",
-      "prefix": "demo-workspace",
+      "prefix": "dw",
       "targets": {
         "build": {
           "executor": "@nrwl/angular:webpack-browser",
@@ -355,7 +355,7 @@
       "projectType": "application",
       "root": "apps/app-three/client",
       "sourceRoot": "apps/app-three/client/src",
-      "prefix": "demo-workspace",
+      "prefix": "dw",
       "targets": {
         "build": {
           "executor": "@nrwl/angular:webpack-browser",
@@ -584,7 +584,7 @@
       "projectType": "library",
       "root": "libs/core/auth",
       "sourceRoot": "libs/core/auth/src",
-      "prefix": "demo-workspace",
+      "prefix": "dw",
       "targets": {
         "test": {
           "executor": "@nrwl/jest:jest",
@@ -630,7 +630,7 @@
       "projectType": "library",
       "root": "libs/core/permissions",
       "sourceRoot": "libs/core/permissions/src",
-      "prefix": "demo-workspace",
+      "prefix": "dw",
       "targets": {
         "test": {
           "executor": "@nrwl/jest:jest",
@@ -655,7 +655,7 @@
       "projectType": "application",
       "root": "apps/shell/shell-client",
       "sourceRoot": "apps/shell/shell-client/src",
-      "prefix": "demo-workspace",
+      "prefix": "dw",
       "targets": {
         "build": {
           "executor": "@nrwl/angular:webpack-browser",

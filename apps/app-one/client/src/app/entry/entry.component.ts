@@ -7,7 +7,7 @@ import { coreClientPermissions } from '@demo-workspace/core/permissions';
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-entry',
+  selector: 'dw-entry',
   templateUrl: 'entry.component.html',
   styleUrls: ['entry.component.scss'],
 })

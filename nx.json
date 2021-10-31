@@ -28,7 +28,7 @@
   },
   "projects": {
     "admin-change-audit": {
-      "tags": ["scope:admin"]
+      "tags": ["scope:admin", "scope:customer"]
     },
     "admin-client": {
       "tags": ["scope:admin"]
@@ -68,13 +68,13 @@
       "implicitDependencies": ["app-two-client"]
     },
     "core-auth": {
-      "tags": ["scope:client"]
+      "tags": ["scope:core"]
     },
     "core-message-bus": {
-      "tags": ["scope:customer"]
+      "tags": ["scope:core"]
     },
     "core-permissions": {
-      "tags": ["scope:customer"]
+      "tags": ["scope:core"]
     },
     "shell-client": {
       "tags": ["scope:customer"]

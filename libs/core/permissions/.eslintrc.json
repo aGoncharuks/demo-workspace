@@ -21,7 +21,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "demo-workspace",
+            "prefix": "dw",
             "style": "kebab-case"
           }
         ]

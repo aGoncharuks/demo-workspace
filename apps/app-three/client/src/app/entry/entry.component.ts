@@ -4,11 +4,11 @@ import { coreClientMessageBus } from '@demo-workspace/core/message-bus';
 import { coreClientPermissions } from '@demo-workspace/core/permissions';
 
 @Component({
-  selector: 'app-entry',
+  selector: 'dw-entry',
   templateUrl: 'entry.component.html',
 })
 export class EntryComponent implements OnInit {
-  value: string = '';
+  value = '';
   constructor(public authService: CoreClientAuthService) {}
 
   ngOnInit() {

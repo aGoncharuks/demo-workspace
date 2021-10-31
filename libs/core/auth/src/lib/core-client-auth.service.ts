@@ -5,7 +5,4 @@ import { Injectable } from '@angular/core';
 })
 export class CoreClientAuthService {
   authToken = (Math.random() * 10).toString();
-
-  constructor() { }
-
 }

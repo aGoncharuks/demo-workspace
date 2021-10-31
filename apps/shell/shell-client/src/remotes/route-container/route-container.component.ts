@@ -18,7 +18,7 @@ export class RouteContainerComponent implements AfterContentInit {
 	  loadRemoteModule({
 	    remoteName: appName,
 	    exposedModule: exposedModulePath
-	  }).then((module: any) => {
+	  }).then(module => {
 	    module.default(appName);
 	  })
 	    .catch(err => console.error(`error loading ${appName}:`, err));
