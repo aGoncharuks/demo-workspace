@@ -23,12 +23,10 @@
       ],
       "@demo-workspace/app-one-shared": ["libs/app-one/shared/src/index.ts"],
       "@demo-workspace/core/auth": ["libs/core/auth/src/index.ts"],
-      "@demo-workspace/core/client/message-bus": [
-        "libs/core/client/message-bus/src/index.ts"
+      "@demo-workspace/core/message-bus": [
+        "libs/core/message-bus/src/index.ts"
       ],
-      "@demo-workspace/core/client/permissions": [
-        "libs/core/client/permissions/src/index.ts"
-      ]
+      "@demo-workspace/core/permissions": ["libs/core/permissions/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -605,38 +605,38 @@
         }
       }
     },
-    "core-client-message-bus": {
-      "root": "libs/core/client/message-bus",
-      "sourceRoot": "libs/core/client/message-bus/src",
+    "core-message-bus": {
+      "root": "libs/core/message-bus",
+      "sourceRoot": "libs/core/message-bus/src",
       "projectType": "library",
       "targets": {
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/core/client/message-bus/**/*.ts"]
+            "lintFilePatterns": ["libs/core/message-bus/**/*.ts"]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/core/client/message-bus"],
+          "outputs": ["coverage/libs/core/message-bus"],
           "options": {
-            "jestConfig": "libs/core/client/message-bus/jest.config.js",
+            "jestConfig": "libs/core/message-bus/jest.config.js",
             "passWithNoTests": true
           }
         }
       }
     },
-    "core-client-permissions": {
+    "core-permissions": {
       "projectType": "library",
-      "root": "libs/core/client/permissions",
-      "sourceRoot": "libs/core/client/permissions/src",
+      "root": "libs/core/permissions",
+      "sourceRoot": "libs/core/permissions/src",
       "prefix": "demo-workspace",
       "targets": {
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/core/client/permissions"],
+          "outputs": ["coverage/libs/core/permissions"],
           "options": {
-            "jestConfig": "libs/core/client/permissions/jest.config.js",
+            "jestConfig": "libs/core/permissions/jest.config.js",
             "passWithNoTests": true
           }
         },
@@ -644,8 +644,8 @@
           "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/core/client/permissions/src/**/*.ts",
-              "libs/core/client/permissions/src/**/*.html"
+              "libs/core/permissions/src/**/*.ts",
+              "libs/core/permissions/src/**/*.html"
             ]
           }
         }

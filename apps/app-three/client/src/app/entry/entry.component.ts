@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CoreClientAuthService } from '@demo-workspace/core/auth';
-import { coreClientMessageBus } from '@demo-workspace/core/client/message-bus';
-import { coreClientPermissions } from '@demo-workspace/core/client/permissions';
+import { coreClientMessageBus } from '@demo-workspace/core/message-bus';
+import { coreClientPermissions } from '@demo-workspace/core/permissions';
 
 @Component({
   selector: 'app-entry',
