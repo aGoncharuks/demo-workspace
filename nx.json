@@ -30,16 +30,6 @@
     "admin-change-audit": {
       "tags": ["scope:admin", "scope:customer"]
     },
-    "admin-client": {
-      "tags": ["scope:admin"]
-    },
-    "admin-client-e2e": {
-      "tags": [],
-      "implicitDependencies": ["admin-client"]
-    },
-    "admin-company-management": {
-      "tags": ["scope:admin"]
-    },
     "app-one-api": {
       "tags": ["scope:customer"]
     },
