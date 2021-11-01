@@ -19,6 +19,9 @@
               {
                 "sourceTag": "scope:customer",
                 "onlyDependOnLibsWithTags": ["scope:customer", "scope:core"]
+              },             {
+                "sourceTag": "scope:admin",
+                "onlyDependOnLibsWithTags": ["scope:customer", "scope:core"]
               }
             ]
           }
