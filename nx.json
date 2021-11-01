@@ -30,6 +30,9 @@
     "admin-change-audit": {
       "tags": ["scope:admin", "scope:customer"]
     },
+    "admin-company-management": {
+      "tags": ["scope:admin"]
+    },
     "app-one-api": {
       "tags": ["scope:customer"]
     },

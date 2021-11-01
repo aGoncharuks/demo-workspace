@@ -18,6 +18,9 @@
       "@demo-workspace/admin/change-audit": [
         "libs/admin/change-audit/src/index.ts"
       ],
+      "@demo-workspace/admin/company-management": [
+        "libs/admin/company-management/src/index.ts"
+      ],
       "@demo-workspace/app-one-shared": ["libs/app-one/shared/src/index.ts"],
       "@demo-workspace/core/auth": ["libs/core/auth/src/index.ts"],
       "@demo-workspace/core/message-bus": [
