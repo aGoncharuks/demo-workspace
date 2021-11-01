@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { adminCompanyManagement } from '@demo-workspace/admin/company-management';
 
 @Component({
   selector: 'dw-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'admin-client';
+
+  constructor() {
+    adminCompanyManagement();
+  }
 }
