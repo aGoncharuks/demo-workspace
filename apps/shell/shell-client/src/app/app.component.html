@@ -1,5 +1,13 @@
-<div>Auth token in shell: {{authService.authToken}}</div>
-<nav class="navigation-container">
-  <a class="navigation-item" *ngFor="let item of menuItems" routerLink="{{item.path}}">{{item.displayName}}</a>
-</nav>
-<router-outlet></router-outlet>
+<div class="page-header">Customer Shell Application</div>
+
+<div class="token-container">Token value in shell: {{authService.authToken}}</div>
+
+<div class="shell-container">
+  <nav class="navigation-container">
+    <a class="navigation-item" *ngFor="let item of menuItems" routerLink="{{item.path}}">{{item.displayName}}</a>
+  </nav>
+
+  <div class="page-container">
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,7 +1,10 @@
-<header>Auth token: {{authService.authToken}}</header>
+<div>App One Entry Component</div>
 
-<main class="page-container">
-  <div *ngFor="let item of (data$ | async)">{{item.name}}</div>
-</main>
+<div class="token-container">Token value in remote: {{authService.authToken}}</div>
 
 <dw-audit-log></dw-audit-log>
+
+<!--<main class="page-container">-->
+<!--  <div *ngFor="let item of (data$ | async)">{{item.name}}</div>-->
+<!--</main>-->
+

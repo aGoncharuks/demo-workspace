@@ -4,7 +4,7 @@ import { DemoType } from '@demo-workspace/app-one-shared';
 import { CoreClientAuthService } from '@demo-workspace/core/auth';
 import { coreClientMessageBus } from '@demo-workspace/core/message-bus';
 import { coreClientPermissions } from '@demo-workspace/core/permissions';
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'dw-entry',
@@ -12,10 +12,9 @@ import { Observable, of } from 'rxjs';
   styleUrls: ['entry.component.scss'],
 })
 export class EntryComponent implements OnInit {
-  data$: Observable<DemoType[]> = of([]);
-  // data$: Observable<DemoType[]> = this.http.get<DemoType[]>(
-  //   'http://localhost:3333/api/data'
-  // );
+  data$: Observable<DemoType[]> = this.http.get<DemoType[]>(
+    'http://localhost:3333/api/data'
+  );
 
   constructor(
     private http: HttpClient,

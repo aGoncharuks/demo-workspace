@@ -8,7 +8,7 @@ import { coreClientPermissions } from '@demo-workspace/core/permissions';
   templateUrl: 'entry.component.html',
 })
 export class EntryComponent implements OnInit {
-  value = '';
+
   constructor(public authService: CoreClientAuthService) {}
 
   ngOnInit() {
