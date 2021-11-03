@@ -1,20 +1,2 @@
 /* You can add global styles to this file, and also import other style files */
-
-body {
-  margin: 0;
-}
-
-.page-header {
-  font-size: 30px;
-  width: 100%;
-  text-align: center;
-  padding: 40px 0;
-}
-
-.token-container {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  padding: 20px 40px;
-  border: 1px dashed black;
-}
+@use "layout/page";

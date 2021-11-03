@@ -47,6 +47,11 @@
               "apps/admin/client/src/assets"
             ],
             "styles": ["apps/admin/client/src/styles.scss"],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "styles"
+              ]
+            },
             "scripts": []
           },
           "configurations": {
@@ -239,6 +244,11 @@
               "apps/app-one/client/src/assets"
             ],
             "styles": ["apps/app-one/client/src/styles.scss"],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "styles"
+              ]
+            },
             "scripts": [],
             "customWebpackConfig": {
               "path": "apps/app-one/client/webpack.config.js"
@@ -389,6 +399,11 @@
               "apps/app-three/client/src/assets"
             ],
             "styles": ["apps/app-three/client/src/styles.scss"],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "styles"
+              ]
+            },
             "scripts": [],
             "customWebpackConfig": {
               "path": "apps/app-three/client/webpack.config.js"
@@ -689,6 +704,11 @@
               "apps/shell/shell-client/src/assets"
             ],
             "styles": ["apps/shell/shell-client/src/styles.scss"],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "styles"
+              ]
+            },
             "scripts": [],
             "customWebpackConfig": {
               "path": "apps/shell/shell-client/webpack.config.js"
