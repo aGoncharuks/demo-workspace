@@ -21,7 +21,7 @@
                 "onlyDependOnLibsWithTags": ["scope:customer", "scope:core"]
               },             {
                 "sourceTag": "scope:admin",
-                "onlyDependOnLibsWithTags": ["scope:customer", "scope:core"]
+                "onlyDependOnLibsWithTags": ["scope:admin", "scope:core"]
               }
             ]
           }
