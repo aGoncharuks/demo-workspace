@@ -44,7 +44,8 @@
       "tags": ["scope:customer"]
     },
     "app-one-client": {
-      "tags": ["scope:customer"]
+      "tags": ["scope:customer"],
+      "implicitDependencies": ["app-one-api"]
     },
     "app-one-client-e2e": {
       "tags": [],
